@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Titillium+Web:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        background-color: hsl(30, 38%, 92%);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .card {
+        display: flex;
+        border-radius: 0.5rem;
+        background-color: white;
+        height: 55%;
+        width: 37vw;
+      }
+      .image {
+        height: auto;
+        border-radius: 0.5rem 0 0 0.5rem;
+        width: 50%;
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover;
+      }
+      .info {
+        width: 50%;
+      }
+      .container {
+        margin: 1.25em;
+        font-family: Montserrat;
+      }
+      p {
+        font-size: 14px;
+        color: hsl(228, 12%, 48%);
+      }
+      h1 {
+        font-family: Fraunces;
+        color: hsl(212, 21%, 14%);
+        line-height: 2rem;
+      }
+      .prices {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .strike {
+        text-decoration: line-through;
+        font-size: small;
+      }
+      .bold {
+        font-family: Fraunces;
+        color: hsl(158, 36%, 37%);
+        font-size: xx-large;
+        margin-right: 1.5rem;
+      }
+      button {
+        width: 100%;
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        border-radius: 0.4rem;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        place-items: center;
+        font-size: medium;
+        font-family: Montserrat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button img {
+        margin-right: 1rem;
+      }
+      button:hover {
+        background-color: hsl(212, 21%, 14%);
+        cursor: pointer;
+      }
+      .text {
+        line-height: 1.6;
+      }
+      .perfume {
+        letter-spacing: 4px;
+      }
+      @media screen and (max-width: 768px) {
+        .card {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin: 5% 3rem;
+          border-radius: 0.5rem;
+        }
+        .image {
+          background-image: url("./images/image-product-mobile.jpg");
+          /* height: auto; */
+          border-radius: 0.5rem 0.5rem 0 0;
+          width: 100%;
+          height: 40%;
+          background-size: cover;
+        }
+        .info {
+          width: 100%;
+          height: 60%;
+        }
+        .container {
+          margin: 1em 2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image"></div>
+      <div class="info">
+        <div class="container">
+          <p class="perfume">PERFUME</p>
+
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+
+          <p class="text">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="prices">
+            <div class="bold">$149.99</div>
+            <div class="strike">$169.99</div>
+          </div>
+          <button class="button">
+            <img src="./images/icon-cart.svg" alt="" />Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kris Marshall</a>.
+    </div>
+  </body>
+</html>
